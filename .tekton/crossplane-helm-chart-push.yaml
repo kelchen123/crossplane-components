@@ -315,16 +315,6 @@ spec:
         optional: true
       - name: netrc
         optional: true
-  taskRunSpecs:
-    - pipelineTaskName: build-helm-chart
-      stepSpecs:
-        - name: use-trusted-artifact
-          computeResources:
-            requests:
-              cpu: 100m
-              memory: 512Mi
-            limits:
-              memory: 1Gi
   taskRunTemplate:
     serviceAccountName: build-pipeline-crossplane-helm
   workspaces:
